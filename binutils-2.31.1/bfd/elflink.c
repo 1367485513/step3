@@ -9444,6 +9444,7 @@ elf_link_swap_symbols_out (struct elf_final_link_info *flinfo)
 	elfsym->sym.st_name
 	  = (unsigned long) _bfd_elf_strtab_offset (flinfo->symstrtab,
 						    elfsym->sym.st_name);
+      printf("second:num=%4ld,name=%8.8ld,value=%8.8lx\n",i,elfsym->sym.st_name,elfsym->sym.st_value);
       bed->s->swap_symbol_out (flinfo->output_bfd, &elfsym->sym,
 			       ((bfd_byte *) symbuf
 				+ (elfsym->dest_index
@@ -12020,8 +12021,10 @@ bfd_elf_final_link (bfd *abfd, struct bfd_link_info *info)
 	    {
 	      o->target_index = bfd_get_symcount (abfd);
 	      elfsym.st_shndx = i;
+	      printf("first:num=%4d,shndx=%4d,",i,elfsym.st_shndx);
 	      if (!bfd_link_relocatable (info))
 		elfsym.st_value = o->vma;
+	      printf("value=%8.8lx \n",elfsym.st_value);
 	      if (elf_link_output_symstrtab (&flinfo, NULL, &elfsym, o,
 					     NULL) != 1)
 		goto error_return;
