@@ -11,8 +11,7 @@ compress-debug.o: ../../gas/compress-debug.c /usr/include/stdc-predef.h \
  /home/majiahao/bbbbb/step1/gcc-install/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include/stdarg.h \
  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
  /usr/include/x86_64-linux-gnu/bits/sys_errlist.h \
- /usr/include/x86_64-linux-gnu/bits/stdio.h ../../gas/../zlib/zlib.h \
- ../../gas/../zlib/zconf.h \
+ ../../gas/../zlib/zlib.h ../../gas/../zlib/zconf.h \
  /home/majiahao/bbbbb/step1/gcc-install/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include-fixed/limits.h \
  /home/majiahao/bbbbb/step1/gcc-install/lib/gcc/x86_64-pc-linux-gnu/8.2.0/include-fixed/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
@@ -69,8 +68,6 @@ config.h:
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
 /usr/include/x86_64-linux-gnu/bits/sys_errlist.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio.h:
 
 ../../gas/../zlib/zlib.h:
 

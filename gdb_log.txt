@@ -1,0 +1,1141 @@
+Starting program: /home/majiahao/bbbbb/step3/binutils-install/bin/ld -plugin /home/majiahao/bbbbb/step1/gcc-install/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/liblto_plugin.so -plugin /home/majiahao/bbbbb/step3/ld-plugin3.so -plugin=/home/majiahao/bbbbb/step3/ld-plugin.so  -plugin-opt=/home/majiahao/bbbbb/step1/gcc-install/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccFvum21.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 /usr/lib/x86_64-linux-gnu/crt1.o /usr/lib/x86_64-linux-gnu/crti.o /home/majiahao/bbbbb/step1/gcc-install/lib/gcc/x86_64-pc-linux-gnu/8.2.0/crtbegin.o -L/home/majiahao/bbbbb/step1/gcc-install/lib/gcc/x86_64-pc-linux-gnu/8.2.0 -L/home/majiahao/bbbbb/step1/gcc-install/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/home/majiahao/bbbbb/step1/gcc-install/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../.. -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /home/majiahao/bbbbb/step1/gcc-install/lib/gcc/x86_64-pc-linux-gnu/8.2.0/crtend.o /usr/lib/x86_64-linux-gnu/crtn.o ld-plugin-test.o -g -o ld-plugin-test3
+
+Breakpoint 1, main (argc=42, argv=0x7fffffffd5a8) at ../../ld/ldmain.c:194
+194	  long start_time = get_run_time ();
+Continuing.
+
+Breakpoint 2, lang_process () at ../../ld/ldlang.c:7160
+7160	  if (link_info.dynamic_list)
+Continuing.
+
+Breakpoint 8, bfd_hash_traverse (table=0x6c8c20 <definedness_table>, func=0x423a2e <set_sym_sections>, info=0x0) at ../../bfd/hash.c:651
+651	  table->frozen = 1;
+Continuing.
+
+Breakpoint 3, ldwrite () at ../../ld/ldwrite.c:574
+574	  bfd_set_error (bfd_error_no_error);
+Continuing.
+
+Breakpoint 4, bfd_elf_final_link (abfd=0x6e82b0, info=0x6cdd80 <link_info>) at ../../bfd/elflink.c:11663
+11663	  const struct elf_backend_data *bed = get_elf_backend_data (abfd);
+Undefined command: "nfo".  Try "help".
+ext_size = 240
+sym_count = 18
+sec = 0x704040
+reloc_count = 0
+additional_reloc_count = 0
+esdi = 0x703d78
+esdo = 0x6f9b60
+dynamic = 1
+emit_relocs = 0
+dynobj = 0x6f9d80
+flinfo = {
+  info = 0x6cdd80 <link_info>, 
+  output_bfd = 0x6e82b0, 
+  symstrtab = 0x98c7b0, 
+  hash_sec = 0x763dc8, 
+  symver_sec = 0x6fba10, 
+  contents = 0x0, 
+  external_relocs = 0x0, 
+  internal_relocs = 0x0, 
+  external_syms = 0x0, 
+  locsym_shndx = 0x0, 
+  internal_syms = 0x0, 
+  indices = 0x0, 
+  sections = 0x0, 
+  symshndxbuf = 0x0, 
+  filesym_count = 0
+}
+o = 0x922488
+p = 0x6f50e8
+sub = 0x41faa1 <build_link_order>
+max_contents_size = 162
+max_external_reloc_size = 96
+max_internal_reloc_count = 4
+max_sym_count = 18
+max_sym_shndx_count = 0
+elfsym = {
+  st_value = 63, 
+  st_size = 476741370111, 
+  st_name = 7, 
+  st_info = 0 '\000', 
+  st_other = 0 '\000', 
+  st_target_internal = 0 '\000', 
+  st_shndx = 0
+}
+i = 0
+symtab_hdr = 0x30
+symtab_shndx_hdr = 0x6f6080
+bed = 0x6c3960 <elf64_x86_64_bed>
+eoinfo = {
+  failed = 7247600, 
+  localsyms = 0, 
+  file_sym_done = 0, 
+  flinfo = 0xffff800000002e61
+}
+merged = 0
+relativecount = 0
+reldyn = 0x0
+amt = 48
+attr_section = 0x0
+attr_size = 0
+std_attrs_section = 0x0
+htab = 0x6ea640
+__PRETTY_FUNCTION__ = "bfd_elf_final_link"
+All defined functions:
+
+File ../../bfd/archive.c:
+bfd_boolean _bfd_add_bfd_to_archive_cache(bfd *, file_ptr, bfd *);
+char *_bfd_append_relative_path(bfd *, char *);
+bfd_boolean _bfd_ar_sizepad(char *, size_t, bfd_size_type);
+void _bfd_ar_spacepad(char *, size_t, const char *, long);
+bfd_boolean _bfd_archive_bsd44_construct_extended_name_table(bfd *, char **, bfd_size_type *, const char **);
+bfd_boolean _bfd_archive_bsd_construct_extended_name_table(bfd *, char **, bfd_size_type *, const char **);
+bfd_boolean _bfd_archive_bsd_update_armap_timestamp(bfd *);
+bfd_boolean _bfd_archive_close_and_cleanup(bfd *);
+bfd_boolean _bfd_archive_coff_construct_extended_name_table(bfd *, char **, bfd_size_type *, const char **);
+bfd_boolean _bfd_bsd44_write_ar_hdr(bfd *, bfd *);
+bfd_boolean _bfd_bsd_write_armap(bfd *, unsigned int, struct orl *, unsigned int, int);
+bfd_boolean _bfd_coff_write_armap(bfd *, unsigned int, struct orl *, unsigned int, int);
+bfd_boolean _bfd_compute_and_write_armap(bfd *, unsigned int);
+bfd_boolean _bfd_construct_extended_name_table(bfd *, bfd_boolean, char **, bfd_size_type *);
+bfd *_bfd_create_empty_archive_element_shell(bfd *);
+bfd *_bfd_generic_get_elt_at_index(bfd *, symindex);
+bfd_boolean _bfd_generic_mkarchive(bfd *);
+void *_bfd_generic_read_ar_hdr(bfd *);
+void *_bfd_generic_read_ar_hdr_mag(bfd *, const char *);
+bfd_boolean _bfd_generic_write_ar_hdr(bfd *, bfd *);
+bfd *_bfd_get_elt_at_filepos(bfd *, file_ptr);
+bfd *_bfd_look_for_bfd_in_cache(bfd *, file_ptr);
+bfd_boolean _bfd_noarchive_construct_extended_name_table(bfd *, char **, bfd_size_type *, const char **);
+bfd *_bfd_noarchive_get_elt_at_index(bfd *, symindex);
+bfd *_bfd_noarchive_openr_next_archived_file(bfd *, bfd *);
+void _bfd_noarchive_truncate_arname(bfd *, const char *, char *);
+bfd_boolean _bfd_noarchive_write_ar_hdr(bfd *, bfd *);
+bfd_boolean _bfd_noarchive_write_armap(bfd *, unsigned int, struct orl *, unsigned int, int);
+bfd_boolean _bfd_slurp_extended_name_table(bfd *);
+bfd_boolean _bfd_write_archive_contents(bfd *);
+void bfd_bsd_truncate_arname(bfd *, const char *, char *);
+void bfd_dont_truncate_arname(bfd *, const char *, char *);
+const bfd_target *bfd_generic_archive_p(bfd *);
+bfd *bfd_generic_openr_next_archived_file(bfd *, bfd *);
+int bfd_generic_stat_arch_elt(bfd *, struct stat *);
+symindex bfd_get_next_mapent(bfd *, symindex, carsym **);
+void bfd_gnu_truncate_arname(bfd *, const char *, char *);
+bfd *bfd_openr_next_archived_file(bfd *, bfd *);
+bfd_boolean bfd_set_archive_head(bfd *, bfd *);
+bfd_boolean bfd_slurp_armap(bfd *);
+static void *_bfd_calloc_wrapper(size_t, size_t);
+static const char *adjust_relative_path(const char *, const char *);
+static int archive_close_worker(void **, void *);
+static struct areltdata *bfd_ar_hdr_from_filesystem(bfd *, const char *, bfd *);
+static bfd_boolean do_slurp_bsd_armap(bfd *);
+static bfd_boolean do_slurp_coff_armap(bfd *);
+static int eq_file_ptr(const void *, const void *);
+static bfd *find_nested_archive(const char *, bfd *);
+static char *get_extended_arelt_filename(bfd *, const char *, file_ptr *);
+static hashval_t hash_file_ptr(const void *);
+static const char *normalize(bfd *, const char *);
+static bfd *open_nested_file(const char *, bfd *);
+
+File ../../bfd/archive64.c:
+bfd_boolean _bfd_archive_64_bit_slurp_armap(bfd *);
+bfd_boolean _bfd_archive_64_bit_write_armap(bfd *, unsigned int, struct orl *, unsigned int, int);
+
+File ../../bfd/archures.c:
+bfd_boolean _bfd_nowrite_set_arch_mach(bfd *, enum bfd_architecture, unsigned long);
+unsigned int bfd_arch_bits_per_address(bfd *);
+unsigned int bfd_arch_bits_per_byte(bfd *);
+void *bfd_arch_default_fill(bfd_size_type, bfd_boolean, bfd_boolean);
+const bfd_arch_info_type *bfd_arch_get_compatible(const bfd *, const bfd *, bfd_boolean);
+const char **bfd_arch_list(void);
+unsigned int bfd_arch_mach_octets_per_byte(enum bfd_architecture, unsigned long);
+const bfd_arch_info_type *bfd_default_compatible(const bfd_arch_info_type *, const bfd_arch_info_type *);
+bfd_boolean bfd_default_scan(const bfd_arch_info_type *, const char *);
+bfd_boolean bfd_default_set_arch_mach(bfd *, enum bfd_architecture, unsigned long);
+enum bfd_architecture bfd_get_arch(bfd *);
+const bfd_arch_info_type *bfd_get_arch_info(bfd *);
+unsigned long bfd_get_mach(bfd *);
+const bfd_arch_info_type *bfd_lookup_arch(enum bfd_architecture, unsigned long);
+unsigned int bfd_octets_per_byte(bfd *);
+const char *bfd_printable_arch_mach(enum bfd_architecture, unsigned long);
+const char *bfd_printable_name(bfd *);
+const bfd_arch_info_type *bfd_scan_arch(const char *);
+void bfd_set_arch_info(bfd *, const bfd_arch_info_type *);
+
+File ../../bfd/bfd.c:
+void _bfd_abort(const char *, int, const char *);
+void _bfd_error_handler(const char *, ...);
+bfd_vma _bfd_get_gp_value(bfd *);
+void _bfd_set_gp_value(bfd *, bfd_vma);
+bfd_boolean bfd_alt_mach_code(bfd *, int);
+void bfd_assert(const char *, int);
+long bfd_canonicalize_reloc(bfd *, sec_ptr, arelent **, asymbol **);
+bfd_boolean bfd_check_compression_header(bfd *, bfd_byte *, asection *, bfd_size_type *);
+bfd_boolean bfd_convert_section_contents(bfd *, sec_ptr, bfd *, bfd_byte **, bfd_size_type *);
+bfd_size_type bfd_convert_section_size(bfd *, sec_ptr, bfd *, bfd_size_type);
+char *bfd_demangle(bfd *, const char *, int);
+bfd_vma bfd_emul_get_commonpagesize(const char *, bfd_boolean);
+bfd_vma bfd_emul_get_maxpagesize(const char *);
+void bfd_emul_set_commonpagesize(const char *, bfd_vma);
+void bfd_emul_set_maxpagesize(const char *, bfd_vma);
+const char *bfd_errmsg(bfd_error_type);
+void bfd_fprintf_vma(bfd *, void *, bfd_vma);
+int bfd_get_arch_size(bfd *);
+int bfd_get_compression_header_size(bfd *, asection *);
+bfd_error_type bfd_get_error(void);
+unsigned int bfd_get_gp_size(bfd *);
+long bfd_get_reloc_upper_bound(bfd *, sec_ptr);
+bfd_byte *bfd_get_relocated_section_contents(bfd *, struct bfd_link_info *, struct bfd_link_order *, bfd_byte *, bfd_boolean, asymbol **);
+int bfd_get_sign_extend_vma(bfd *);
+void bfd_perror(const char *);
+bfd_boolean bfd_record_phdr(bfd *, unsigned long, bfd_boolean, flagword, bfd_boolean, bfd_vma, bfd_boolean, bfd_boolean, unsigned int, asection **);
+bfd_vma bfd_scan_vma(const char *, const char **, int);
+bfd_assert_handler_type bfd_set_assert_handler(bfd_assert_handler_type);
+void bfd_set_error(bfd_error_type);
+bfd_error_handler_type bfd_set_error_handler(bfd_error_handler_type);
+void bfd_set_error_program_name(const char *);
+bfd_boolean bfd_set_file_flags(bfd *, flagword);
+void bfd_set_gp_size(bfd *, unsigned int);
+void bfd_set_input_error(bfd *, bfd_error_type);
+bfd_boolean bfd_set_start_address(bfd *, bfd_vma);
+void bfd_sprintf_vma(bfd *, char *, bfd_vma);
+void bfd_update_compression_header(bfd *, bfd_byte *, asection *);
+static void _bfd_default_assert_handler(const char *, const char *, const char *, int);
+static int _bfd_doprnt(FILE *, const char *, union _bfd_doprnt_args *);
+static unsigned int _bfd_doprnt_scan(const char *, union _bfd_doprnt_args *);
+static void bfd_elf_set_pagesize(const bfd_target *, bfd_vma, int, const bfd_target *);
+static void error_handler_internal(const char *, struct __va_list_tag *);
+static bfd_boolean is32bit(bfd *);
+
+File ../../bfd/bfdio.c:
+FILE *_bfd_real_fopen(const char *, const char *);
+int _bfd_real_fseek(FILE *, file_ptr, int);
+file_ptr _bfd_real_ftell(FILE *);
+bfd_size_type bfd_bread(void *, bfd_size_type, bfd *);
+bfd_size_type bfd_bwrite(const void *, bfd_size_type, bfd *);
+int bfd_flush(bfd *);
+ufile_ptr bfd_get_file_size(bfd *);
+long bfd_get_mtime(bfd *);
+ufile_ptr bfd_get_size(bfd *);
+void *bfd_mmap(bfd *, void *, bfd_size_type, int, int, file_ptr, void **, bfd_size_type *);
+int bfd_seek(bfd *, file_ptr, int);
+int bfd_stat(bfd *, struct stat *);
+file_ptr bfd_tell(bfd *);
+static FILE *close_on_exec(FILE *);
+static int memory_bclose(struct bfd *);
+static int memory_bflush(bfd *);
+static void *memory_bmmap(bfd *, void *, bfd_size_type, int, int, file_ptr, void **, bfd_size_type *);
+static file_ptr memory_bread(bfd *, void *, file_ptr);
+static int memory_bseek(bfd *, file_ptr, int);
+static int memory_bstat(bfd *, struct stat *);
+static file_ptr memory_btell(bfd *);
+static file_ptr memory_bwrite(bfd *, const void *, file_ptr);
+
+File ../../bfd/binary.c:
+static long binary_canonicalize_symtab(bfd *, asymbol **);
+static bfd_boolean binary_get_section_contents(bfd *, asection *, void *, file_ptr, bfd_size_type);
+static void binary_get_symbol_info(bfd *, asymbol *, symbol_info *);
+static long binary_get_symtab_upper_bound(bfd *);
+static bfd_boolean binary_mkobject(bfd *);
+static const bfd_target *binary_object_p(bfd *);
+static bfd_boolean binary_set_section_contents(bfd *, asection *, const void *, file_ptr, bfd_size_type);
+static int binary_sizeof_headers(bfd *, struct bfd_link_info *);
+static char *mangle_name(bfd *, char *);
+
+File ../../bfd/cache.c:
+bfd_boolean bfd_cache_close(bfd *);
+bfd_boolean bfd_cache_close_all(void);
+bfd_boolean bfd_cache_init(bfd *);
+FILE *bfd_open_file(bfd *);
+static bfd_boolean bfd_cache_delete(bfd *);
+static FILE *bfd_cache_lookup_worker(bfd *, enum cache_flag);
+static int bfd_cache_max_open(void);
+static int cache_bclose(struct bfd *);
+static int cache_bflush(struct bfd *);
+static void *cache_bmmap(struct bfd *, void *, bfd_size_type, int, int, file_ptr, void **, bfd_size_type *);
+static file_ptr cache_bread(struct bfd *, void *, file_ptr);
+static file_ptr cache_bread_1(FILE *, void *, file_ptr);
+static int cache_bseek(struct bfd *, file_ptr, int);
+static int cache_bstat(struct bfd *, struct stat *);
+static file_ptr cache_btell(struct bfd *);
+static file_ptr cache_bwrite(struct bfd *, const void *, file_ptr);
+static bfd_boolean close_one(void);
+static void insert(bfd *);
+static void snip(bfd *);
+
+File ../../bfd/coff-i386.c:
+static bfd_boolean coff_i386_is_local_label_name(bfd *, const char *);
+static bfd_reloc_status_type coff_i386_reloc(bfd *, arelent *, asymbol *, void *, asection *, bfd *, char **);
+static reloc_howto_type *coff_i386_reloc_name_lookup(bfd *, const char *);
+static reloc_howto_type *coff_i386_reloc_type_lookup(bfd *, bfd_reloc_code_real_type);
+static reloc_howto_type *coff_i386_rtype_to_howto(bfd *, asection *, struct internal_reloc *, struct coff_link_hash_entry *, struct internal_syment *, bfd_vma *);
+static bfd_boolean coff_pe_i386_relocate_section(bfd *, struct bfd_link_info *, bfd *, asection *, bfd_byte *, struct internal_reloc *, struct internal_syment *, asection **);
+static bfd_boolean in_reloc_p(bfd *, reloc_howto_type *);
+
+File ../../bfd/coff-x86_64.c:
+static bfd_boolean coff_amd64_is_local_label_name(bfd *, const char *);
+static bfd_reloc_status_type coff_amd64_reloc(bfd *, arelent *, asymbol *, void *, asection *, bfd *, char **);
+static reloc_howto_type *coff_amd64_reloc_name_lookup(bfd *, const char *);
+static reloc_howto_type *coff_amd64_reloc_type_lookup(bfd *, bfd_reloc_code_real_type);
+static reloc_howto_type *coff_amd64_rtype_to_howto(bfd *, asection *, struct internal_reloc *, struct coff_link_hash_entry *, struct internal_syment *, bfd_vma *);
+static bfd_boolean coff_pe_amd64_relocate_section(bfd *, struct bfd_link_info *, bfd *, asection *, bfd_byte *, struct internal_reloc *, struct internal_syment *, asection **);
+static bfd_boolean in_reloc_p(bfd *, reloc_howto_type *);
+
+File ../../bfd/coffcode.h:
+static bfd_boolean bfd_coff_set_long_section_names_allowed(bfd *, int);
+static void *buy_and_read(bfd *, file_ptr, bfd_size_type);
+static bfd_boolean coff_apply_checksum(bfd *);
+static bfd_boolean coff_bad_format_hook(bfd *, void *);
+static long coff_canonicalize_reloc(bfd *, sec_ptr, arelent **, asymbol **);
+static enum coff_symbol_classification coff_classify_symbol(bfd *, struct internal_syment *);
+static unsigned int coff_compute_checksum(bfd *);
+static bfd_boolean coff_compute_section_file_positions(bfd *);
+static bfd_boolean coff_link_output_has_begun(bfd *, struct coff_final_link_info *);
+static bfd_boolean coff_new_section_hook(bfd *, asection *);
+static bfd_boolean coff_print_aux(bfd *, FILE *, combined_entry_type *, combined_entry_type *, combined_entry_type *, unsigned int);
+static bfd_boolean coff_read_word(bfd *, unsigned int *);
+static void coff_set_alignment_hook(bfd *, asection *, void *);
+static bfd_boolean coff_set_arch_mach(bfd *, enum bfd_architecture, unsigned long);
+static bfd_boolean coff_set_arch_mach_hook(bfd *, void *);
+static void coff_set_custom_section_alignment(bfd *, asection *, const struct coff_section_alignment_entry *, const unsigned int);
+static bfd_boolean coff_set_flags(bfd *, unsigned int *, unsigned short *);
+static bfd_boolean coff_set_section_contents(bfd *, sec_ptr, const void *, file_ptr, bfd_size_type);
+static bfd_boolean coff_slurp_line_table(bfd *, asection *);
+static bfd_boolean coff_slurp_reloc_table(bfd *, sec_ptr, asymbol **);
+static bfd_boolean coff_slurp_symbol_table(bfd *);
+static int coff_sort_func_alent(const void *, const void *);
+static bfd_boolean coff_write_object_contents(bfd *);
+static bfd_boolean coff_write_relocs(bfd *, int);
+static int dummy_reloc16_estimate(bfd *, asection *, arelent *, unsigned int, struct bfd_link_info *);
+static void dummy_reloc16_extra_cases(bfd *, struct bfd_link_info *, struct bfd_link_order *, arelent *, bfd_byte *, unsigned int *, unsigned int *);
+static flagword handle_COMDAT(bfd *, flagword, void *, const char *, asection *);
+static long sec_to_styp_flags(const char *, flagword);
+static int sort_by_secaddr(const void *, const void *);
+static bfd_boolean styp_to_sec_flags(bfd *, void *, const char *, asection *, flagword *);
+static bfd_boolean symname_in_debug_hook(bfd *, struct internal_syment *);
+
+File ../../bfd/coffgen.c:
+bfd_boolean _bfd_coff_free_symbols(bfd *);
+bfd_boolean _bfd_coff_get_external_symbols(bfd *);
+const char *_bfd_coff_internal_syment_name(bfd *, const struct internal_syment *, char *);
+bfd_boolean _bfd_coff_is_local_label_name(bfd *, const char *);
+struct internal_reloc *_bfd_coff_read_internal_relocs(bfd *, asection *, bfd_boolean, bfd_byte *, bfd_boolean, struct internal_reloc *);
+const char *_bfd_coff_read_string_table(bfd *);
+bfd_boolean _bfd_coff_section_already_linked(bfd *, asection *, struct bfd_link_info *);
+bfd_boolean bfd_coff_gc_sections(bfd *, struct bfd_link_info *);
+bfd_boolean bfd_coff_set_symbol_class(bfd *, asymbol *, unsigned int);
+asymbol *coff_bfd_make_debug_symbol(bfd *, void *, unsigned long);
+long coff_canonicalize_symtab(bfd *, asymbol **);
+int coff_count_linenumbers(bfd *);
+bfd_boolean coff_find_inliner_info(bfd *, const char **, const char **, unsigned int *);
+bfd_boolean coff_find_nearest_line(bfd *, asymbol **, asection *, bfd_vma, const char **, const char **, unsigned int *, unsigned int *);
+bfd_boolean coff_find_nearest_line_with_names(bfd *, asymbol **, asection *, bfd_vma, const char **, const char **, unsigned int *, const struct dwarf_debug_section *);
+alent *coff_get_lineno(bfd *, asymbol *);
+combined_entry_type *coff_get_normalized_symtab(bfd *);
+long coff_get_reloc_upper_bound(bfd *, sec_ptr);
+void coff_get_symbol_info(bfd *, asymbol *, symbol_info *);
+long coff_get_symtab_upper_bound(bfd *);
+asymbol *coff_make_empty_symbol(bfd *);
+void coff_mangle_symbols(bfd *);
+const bfd_target *coff_object_p(bfd *);
+void coff_print_symbol(bfd *, void *, asymbol *, bfd_print_symbol_type);
+const bfd_target *coff_real_object_p(bfd *, unsigned int, struct internal_filehdr *, struct internal_aouthdr *);
+bfd_boolean coff_renumber_symbols(bfd *, int *);
+asection *coff_section_from_bfd_index(bfd *, int);
+int coff_sizeof_headers(bfd *, struct bfd_link_info *);
+bfd_boolean coff_write_alien_symbol(bfd *, asymbol *, struct internal_syment *, union internal_auxent *, bfd_vma *, bfd_size_type *, asection **, bfd_size_type *);
+bfd_boolean coff_write_linenumbers(bfd *);
+bfd_boolean coff_write_symbols(bfd *);
+static void _bfd_coff_gc_keep(struct bfd_link_info *);
+static bfd_boolean _bfd_coff_gc_mark(struct bfd_link_info *, asection *, coff_gc_mark_hook_fn);
+static bfd_boolean _bfd_coff_gc_mark_extra_sections(struct bfd_link_info *, coff_gc_mark_hook_fn);
+static asection *_bfd_coff_gc_mark_hook(asection *, struct bfd_link_info *, struct internal_reloc *, struct coff_link_hash_entry *, struct internal_syment *);
+static bfd_boolean _bfd_coff_gc_mark_reloc(struct bfd_link_info *, asection *, coff_gc_mark_hook_fn, struct coff_reloc_cookie *);
+static asection *_bfd_coff_gc_mark_rsec(struct bfd_link_info *, asection *, coff_gc_mark_hook_fn, struct coff_reloc_cookie *);
+static char *build_debug_section(bfd *, asection **);
+static void coff_fix_symbol_name(bfd *, asymbol *, combined_entry_type *, bfd_size_type *, asection **, bfd_size_type *);
+static bfd_boolean coff_gc_sweep(bfd *, struct bfd_link_info *);
+static bfd_boolean coff_gc_sweep_symbol(struct coff_link_hash_entry *, void *);
+static void coff_pointerize_aux(bfd *, combined_entry_type *, combined_entry_type *, unsigned int, combined_entry_type *);
+static bfd_boolean coff_write_native_symbol(bfd *, coff_symbol_type *, bfd_vma *, bfd_size_type *, asection **, bfd_size_type *);
+static bfd_boolean coff_write_symbol(bfd *, asymbol *, combined_entry_type *, bfd_vma *, bfd_size_type *, asection **, bfd_size_type *);
+static char *copy_name(bfd *, char *, size_t);
+static void fini_reloc_cookie(struct coff_reloc_cookie *, bfd *);
+static void fini_reloc_cookie_for_section(struct coff_reloc_cookie *, asection *);
+static void fini_reloc_cookie_rels(struct coff_reloc_cookie *, asection *);
+static void fixup_symbol_value(bfd *, coff_symbol_type *, struct internal_syment *);
+static bfd_boolean init_reloc_cookie(struct coff_reloc_cookie *, struct bfd_link_info *, bfd *);
+static bfd_boolean init_reloc_cookie_for_section(struct coff_reloc_cookie *, struct bfd_link_info *, asection *);
+static bfd_boolean init_reloc_cookie_rels(struct coff_reloc_cookie *, struct bfd_link_info *, bfd *, asection *);
+static bfd_boolean make_a_section_from_file(bfd *, struct internal_scnhdr *, unsigned int);
+static void null_error_handler(const char *, struct __va_list_tag *);
+
+File ../../bfd/cofflink.c:
+struct bfd_hash_entry *_bfd_coff_debug_merge_hash_newfunc(struct bfd_hash_entry *, struct bfd_hash_table *, const char *);
+bfd_boolean _bfd_coff_final_link(bfd *, struct bfd_link_info *);
+bfd_boolean _bfd_coff_generic_relocate_section(bfd *, struct bfd_link_info *, bfd *, asection *, bfd_byte *, struct internal_reloc *, struct internal_syment *, asection **);
+bfd_boolean _bfd_coff_link_add_symbols(bfd *, struct bfd_link_info *);
+struct bfd_hash_entry *_bfd_coff_link_hash_newfunc(struct bfd_hash_entry *, struct bfd_hash_table *, const char *);
+struct bfd_link_hash_table *_bfd_coff_link_hash_table_create(bfd *);
+bfd_boolean _bfd_coff_link_hash_table_init(struct coff_link_hash_table *, bfd *, struct bfd_hash_entry *(*)(struct bfd_hash_entry *, struct bfd_hash_table *, const char *), 
+    unsigned int);
+bfd_boolean _bfd_coff_link_input_bfd(struct coff_final_link_info *, bfd *);
+bfd_boolean _bfd_coff_reloc_link_order(bfd *, struct coff_final_link_info *, asection *, struct bfd_link_order *);
+bfd_boolean _bfd_coff_write_global_sym(struct bfd_hash_entry *, void *);
+bfd_boolean _bfd_coff_write_task_globals(struct coff_link_hash_entry *, void *);
+static bfd_boolean coff_link_add_object_symbols(bfd *, struct bfd_link_info *);
+static bfd_boolean coff_link_add_symbols(bfd *, struct bfd_link_info *);
+static bfd_boolean coff_link_check_archive_element(bfd *, struct bfd_link_info *, struct bfd_link_hash_entry *, const char *, bfd_boolean *);
+static char *dores_com(char *, bfd *, int);
+static char *get_name(char *, char **);
+static void mark_relocs(struct coff_final_link_info *, bfd *);
+static int process_embedded_commands(bfd *, struct bfd_link_info *, bfd *);
+
+File ../../bfd/compress.c:
+void bfd_cache_section_contents(asection *, void *);
+bfd_boolean bfd_compress_section(bfd *, sec_ptr, bfd_byte *);
+bfd_boolean bfd_get_full_section_contents(bfd *, sec_ptr, bfd_byte **);
+bfd_boolean bfd_init_section_compress_status(bfd *, sec_ptr);
+bfd_boolean bfd_init_section_decompress_status(bfd *, sec_ptr);
+bfd_boolean bfd_is_section_compressed(bfd *, sec_ptr);
+bfd_boolean bfd_is_section_compressed_with_header(bfd *, sec_ptr, int *, bfd_size_type *);
+static bfd_size_type bfd_compress_section_contents(bfd *, sec_ptr, bfd_byte *, bfd_size_type);
+static bfd_boolean decompress_contents(bfd_byte *, bfd_size_type, bfd_byte *, bfd_size_type);
+
+File ../../bfd/corefile.c:
+const char *bfd_core_file_failing_command(bfd *);
+int bfd_core_file_failing_signal(bfd *);
+int bfd_core_file_pid(bfd *);
+bfd_boolean core_file_matches_executable_p(bfd *, bfd *);
+bfd_boolean generic_core_file_matches_executable_p(bfd *, bfd *);
+
+File ../../bfd/cpu-i386.c:
+void *bfd_arch_i386_short_nop_fill(bfd_size_type, bfd_boolean, bfd_boolean);
+static void *bfd_arch_i386_fill(bfd_size_type, bfd_boolean, bfd_boolean);
+static void *bfd_arch_i386_long_nop_fill(bfd_size_type, bfd_boolean, bfd_boolean);
+static void *bfd_arch_i386_onebyte_nop_fill(bfd_size_type, bfd_boolean, bfd_boolean);
+static const bfd_arch_info_type *bfd_i386_compatible(const bfd_arch_info_type *, const bfd_arch_info_type *);
+
+File ../../bfd/dwarf1.c:
+bfd_boolean _bfd_dwarf1_find_nearest_line(bfd *, asymbol **, asection *, bfd_vma, const char **, const char **, unsigned int *);
+static struct dwarf1_func *alloc_dwarf1_func(struct dwarf1_debug *, struct dwarf1_unit *);
+static struct dwarf1_unit *alloc_dwarf1_unit(struct dwarf1_debug *);
+static bfd_boolean dwarf1_unit_find_nearest_line(struct dwarf1_debug *, struct dwarf1_unit *, unsigned long, const char **, const char **, unsigned int *);
+static bfd_boolean parse_die(bfd *, struct die_info *, bfd_byte *, bfd_byte *);
+static bfd_boolean parse_functions_in_unit(struct dwarf1_debug *, struct dwarf1_unit *);
+static bfd_boolean parse_line_table(struct dwarf1_debug *, struct dwarf1_unit *);
+
+File ../../bfd/dwarf2.c:
+void _bfd_dwarf2_cleanup_debug_info(bfd *, void **);
+bfd_boolean _bfd_dwarf2_find_inliner_info(bfd *, const char **, const char **, unsigned int *, void **);
+bfd_boolean _bfd_dwarf2_find_nearest_line(bfd *, asymbol **, asymbol *, asection *, bfd_vma, const char **, const char **, unsigned int *, unsigned int *, 
+    const struct dwarf_debug_section *, unsigned int, void **);
+bfd_signed_vma _bfd_dwarf2_find_symbol_bias(asymbol **, void **);
+bfd_boolean _bfd_dwarf2_slurp_debug_info(bfd *, bfd *, const struct dwarf_debug_section *, asymbol **, void **, bfd_boolean);
+asymbol *_bfd_elf_find_function(bfd *, asymbol **, asection *, bfd_vma, const char **, const char **);
+static bfd_boolean add_line_info(struct line_info_table *, bfd_vma, unsigned char, char *, unsigned int, unsigned int, unsigned int, int);
+static bfd_boolean arange_add(const struct comp_unit *, struct arange *, bfd_vma, bfd_vma);
+static bfd_boolean build_line_info_table(struct line_info_table *, struct line_sequence *);
+static bfd_boolean build_lookup_funcinfo_table(struct comp_unit *);
+static bfd_boolean comp_unit_contains_address(struct comp_unit *, bfd_vma);
+static bfd_boolean comp_unit_find_line(struct comp_unit *, asymbol *, bfd_vma, const char **, unsigned int *, struct dwarf2_debug *);
+static bfd_vma comp_unit_find_nearest_line(struct comp_unit *, bfd_vma, const char **, struct funcinfo **, unsigned int *, unsigned int *, struct dwarf2_debug *);
+static bfd_boolean comp_unit_hash_info(struct dwarf2_debug *, struct comp_unit *, struct info_hash_table *, struct info_hash_table *);
+static bfd_boolean comp_unit_maybe_decode_line_info(struct comp_unit *, struct dwarf2_debug *);
+static int compare_lookup_funcinfos(const void *, const void *);
+static int compare_sequences(const void *, const void *);
+static char *concat_filename(struct line_info_table *, unsigned int);
+static struct info_hash_table *create_info_hash_table(bfd *);
+static struct line_info_table *decode_line_info(struct comp_unit *, struct dwarf2_debug *);
+static bfd_boolean find_abstract_instance(struct comp_unit *, bfd_byte *, struct attribute *, const char **, bfd_boolean *, char **, int *);
+static asection *find_debug_info(bfd *, const struct dwarf_debug_section *, asection *);
+static bfd_boolean info_hash_lookup_funcinfo(struct info_hash_table *, asymbol *, bfd_vma, const char **, unsigned int *);
+static bfd_boolean info_hash_lookup_varinfo(struct info_hash_table *, asymbol *, bfd_vma, const char **, unsigned int *);
+static struct bfd_hash_entry *info_hash_table_newfunc(struct bfd_hash_entry *, struct bfd_hash_table *, const char *);
+static bfd_boolean insert_info_hash_table(struct info_hash_table *, const char *, void *, bfd_boolean);
+static bfd_boolean is_str_attr(enum dwarf_form);
+static bfd_boolean line_info_add_file_name(struct line_info_table *, char *, unsigned int, unsigned int, unsigned int);
+static bfd_boolean line_info_add_include_dir(struct line_info_table *, char *);
+static bfd_boolean line_info_add_include_dir_stub(struct line_info_table *, char *, unsigned int, unsigned int, unsigned int);
+static struct abbrev_info *lookup_abbrev(unsigned int, struct abbrev_info **);
+static bfd_boolean lookup_address_in_function_table(struct comp_unit *, bfd_vma, struct funcinfo **);
+static bfd_vma lookup_address_in_line_info_table(struct line_info_table *, bfd_vma, const char **, unsigned int *, unsigned int *);
+static struct info_list_node *lookup_info_hash_table(struct info_hash_table *, const char *);
+static bfd_boolean lookup_symbol_in_function_table(struct comp_unit *, asymbol *, bfd_vma, const char **, unsigned int *);
+static bfd_boolean lookup_symbol_in_variable_table(struct comp_unit *, asymbol *, bfd_vma, const char **, unsigned int *);
+static bfd_boolean new_line_sorts_after(struct line_info *, struct line_info *);
+static bfd_boolean non_mangled(int);
+static struct comp_unit *parse_comp_unit(struct dwarf2_debug *, bfd_vma, bfd_byte *, unsigned int);
+static bfd_boolean place_sections(bfd *, struct dwarf2_debug *);
+static unsigned int read_1_byte(bfd *, bfd_byte *, bfd_byte *);
+static int read_1_signed_byte(bfd *, bfd_byte *, bfd_byte *);
+static unsigned int read_2_bytes(bfd *, bfd_byte *, bfd_byte *);
+static unsigned int read_4_bytes(bfd *, bfd_byte *, bfd_byte *);
+static bfd_uint64_t read_8_bytes(bfd *, bfd_byte *, bfd_byte *);
+static struct abbrev_info **read_abbrevs(bfd *, bfd_uint64_t, struct dwarf2_debug *);
+static bfd_uint64_t read_address(struct comp_unit *, bfd_byte *, bfd_byte *);
+static bfd_byte *read_alt_indirect_ref(struct comp_unit *, bfd_uint64_t);
+static char *read_alt_indirect_string(struct comp_unit *, bfd_byte *, bfd_byte *, unsigned int *);
+static bfd_byte *read_attribute(struct attribute *, struct attr_abbrev *, struct comp_unit *, bfd_byte *, bfd_byte *);
+static bfd_byte *read_attribute_value(struct attribute *, unsigned int, bfd_vma, struct comp_unit *, bfd_byte *, bfd_byte *);
+static bfd_boolean read_debug_ranges(struct comp_unit *);
+static bfd_boolean read_formatted_entries(struct comp_unit *, bfd_byte **, bfd_byte *, struct line_info_table *, bfd_boolean (*)(struct line_info_table *, char *, unsigned int, 
+    unsigned int, unsigned int));
+static char *read_indirect_line_string(struct comp_unit *, bfd_byte *, bfd_byte *, unsigned int *);
+static char *read_indirect_string(struct comp_unit *, bfd_byte *, bfd_byte *, unsigned int *);
+static bfd_byte *read_n_bytes(bfd_byte *, bfd_byte *, struct dwarf_block *);
+static bfd_boolean read_rangelist(struct comp_unit *, struct arange *, bfd_uint64_t);
+static bfd_boolean read_section(bfd *, const struct dwarf_debug_section *, asymbol **, bfd_uint64_t, bfd_byte **, bfd_size_type *);
+static char *read_string(bfd *, bfd_byte *, bfd_byte *, unsigned int *);
+static struct funcinfo *reverse_funcinfo_list(struct funcinfo *);
+static struct varinfo *reverse_varinfo_list(struct varinfo *);
+static bfd_boolean save_section_vma(const bfd *, struct dwarf2_debug *);
+static bfd_boolean scan_unit_for_symbols(struct comp_unit *);
+static bfd_boolean section_vma_same(const bfd *, const struct dwarf2_debug *);
+static void set_debug_vma(bfd *, bfd *);
+static bfd_boolean sort_line_sequences(struct line_info_table *);
+static bfd_boolean stash_find_line_fast(struct dwarf2_debug *, asymbol *, bfd_vma, const char **, unsigned int *);
+static void stash_maybe_enable_info_hash_tables(bfd *, struct dwarf2_debug *);
+static bfd_boolean stash_maybe_update_info_hash_tables(struct dwarf2_debug *);
+static void stash_verify_info_hash_table(struct dwarf2_debug *);
+static void unset_sections(struct dwarf2_debug *);
+
+File ../../bfd/elf-attrs.c:
+char *_bfd_elf_attr_strdup(bfd *, const char *);
+void _bfd_elf_copy_obj_attributes(bfd *, bfd *);
+bfd_boolean _bfd_elf_merge_object_attributes(bfd *, struct bfd_link_info *);
+bfd_boolean _bfd_elf_merge_unknown_attribute_list(bfd *, bfd *);
+bfd_boolean _bfd_elf_merge_unknown_attribute_low(bfd *, bfd *, int);
+int _bfd_elf_obj_attrs_arg_type(bfd *, int, unsigned int);
+void _bfd_elf_parse_attributes(bfd *, Elf_Internal_Shdr *);
+void bfd_elf_add_obj_attr_int(bfd *, int, unsigned int, unsigned int);
+void bfd_elf_add_obj_attr_int_string(bfd *, int, unsigned int, unsigned int, const char *);
+void bfd_elf_add_obj_attr_string(bfd *, int, unsigned int, const char *);
+int bfd_elf_get_obj_attr_int(bfd *, int, unsigned int);
+bfd_vma bfd_elf_obj_attr_size(bfd *);
+void bfd_elf_set_obj_attr_contents(bfd *, bfd_byte *, bfd_vma);
+static obj_attribute *elf_new_obj_attr(bfd *, int, unsigned int);
+static int gnu_obj_attrs_arg_type(unsigned int);
+static bfd_boolean is_default_attr(obj_attribute *);
+static bfd_vma obj_attr_size(unsigned int, obj_attribute *);
+static int uleb128_size(unsigned int);
+static const char *vendor_obj_attr_name(bfd *, int);
+static bfd_vma vendor_obj_attr_size(bfd *, int);
+static void vendor_set_obj_attr_contents(bfd *, bfd_byte *, bfd_vma, int);
+static bfd_byte *write_obj_attribute(bfd_byte *, unsigned int, obj_attribute *);
+static bfd_byte *write_uleb128(bfd_byte *, unsigned int);
+
+File ../../bfd/elf-bfd.h:
+static struct elf_link_hash_entry *weakdef(struct elf_link_hash_entry *);
+
+File ../../bfd/elf-eh-frame.c:
+bfd_boolean _bfd_elf_adjust_eh_frame_global_symbol(struct elf_link_hash_entry *, void *);
+bfd_boolean _bfd_elf_can_make_relative(bfd *, struct bfd_link_info *, asection *);
+bfd_boolean _bfd_elf_discard_section_eh_frame(bfd *, struct bfd_link_info *, asection *, bfd_boolean (*)(bfd_vma, void *), struct elf_reloc_cookie *);
+bfd_boolean _bfd_elf_discard_section_eh_frame_hdr(bfd *, struct bfd_link_info *);
+unsigned int _bfd_elf_eh_frame_address_size(bfd *, const asection *);
+bfd_boolean _bfd_elf_eh_frame_entry_present(struct bfd_link_info *);
+bfd_boolean _bfd_elf_eh_frame_present(struct bfd_link_info *);
+bfd_vma _bfd_elf_eh_frame_section_offset(bfd *, struct bfd_link_info *, asection *, bfd_vma);
+bfd_byte _bfd_elf_encode_eh_address(bfd *, struct bfd_link_info *, asection *, bfd_vma, asection *, bfd_vma, bfd_vma *);
+bfd_boolean _bfd_elf_end_eh_frame_parsing(struct bfd_link_info *);
+bfd_boolean _bfd_elf_fixup_eh_frame_hdr(struct bfd_link_info *);
+bfd_boolean _bfd_elf_gc_mark_fdes(struct bfd_link_info *, asection *, asection *, elf_gc_mark_hook_fn, struct elf_reloc_cookie *);
+bfd_boolean _bfd_elf_maybe_strip_eh_frame_hdr(struct bfd_link_info *);
+void _bfd_elf_parse_eh_frame(bfd *, struct bfd_link_info *, asection *, struct elf_reloc_cookie *);
+bfd_boolean _bfd_elf_parse_eh_frame_entry(struct bfd_link_info *, asection *, struct elf_reloc_cookie *);
+bfd_boolean _bfd_elf_write_section_eh_frame(bfd *, struct bfd_link_info *, asection *, bfd_byte *);
+bfd_boolean _bfd_elf_write_section_eh_frame_entry(bfd *, struct bfd_link_info *, asection *, bfd_byte *);
+bfd_boolean _bfd_elf_write_section_eh_frame_hdr(bfd *, struct bfd_link_info *);
+static void add_eh_frame_hdr_terminator(asection *, asection *);
+static int adjust_eh_frame_local_symbols(const asection *, struct elf_reloc_cookie *);
+static void bfd_elf_discard_eh_frame_entry(struct eh_frame_hdr_info *);
+static void bfd_elf_record_eh_frame_entry(struct eh_frame_hdr_info *, asection *);
+static hashval_t cie_compute_hash(struct cie *);
+static int cie_eq(const void *, const void *);
+Quit
+Continuing.
+
+Breakpoint 6, bfd_elf_final_link (abfd=0x6e82b0, info=0x6cdd80 <link_info>) at ../../bfd/elflink.c:11855
+11855				max_external_reloc_size = ext_size;
+33: *abfd = {
+  filename = 0x6ea3f0 "ld-plugin-test3", 
+  xvec = 0x687720 <x86_64_elf64_vec>, 
+  iostream = 0x6ea410, 
+  iovec = 0x66de80 <cache_iovec>, 
+  lru_prev = 0x718e20, 
+  lru_next = 0x90cca0, 
+  where = 0, 
+  mtime = 0, 
+  id = 0, 
+  format = bfd_object, 
+  direction = write_direction, 
+  flags = 386, 
+  cacheable = 1, 
+  target_defaulted = 0, 
+  opened_once = 1, 
+  mtime_set = 0, 
+  no_export = 0, 
+  output_has_begun = 0, 
+  has_armap = 0, 
+  is_thin_archive = 0, 
+  selective_search = 0, 
+  is_linker_output = 1, 
+  is_linker_input = 0, 
+  plugin_format = bfd_plugin_unknown, 
+  lto_output = 0, 
+  plugin_dummy_bfd = 0x0, 
+  origin = 0, 
+  proxy_origin = 0, 
+  section_htab = {
+    table = 0x924320, 
+    newfunc = 0x45c2a8 <bfd_section_hash_newfunc>, 
+    memory = 0x6e93e0, 
+    size = 61, 
+    count = 37, 
+    entsize = 304, 
+    frozen = 0
+  }, 
+  sections = 0x6e9490, 
+  section_last = 0x925100, 
+  section_count = 31, 
+  archive_pass = 0, 
+  start_address = 4198496, 
+  outsymbols = 0x0, 
+  symcount = 0, 
+  dynsymcount = 0, 
+  arch_info = 0x69b8e0 <bfd_x86_64_arch>, 
+  arelt_data = 0x0, 
+  my_archive = 0x0, 
+  archive_next = 0x0, 
+  archive_head = 0x0, 
+  nested_archives = 0x0, 
+  link = {
+    next = 0x6ea640, 
+    hash = 0x6ea640
+  }, 
+  tdata = {
+    aout_data = 0x6e8400, 
+    aout_ar_data = 0x6e8400, 
+    coff_obj_data = 0x6e8400, 
+    pe_obj_data = 0x6e8400, 
+    xcoff_obj_data = 0x6e8400, 
+    ecoff_obj_data = 0x6e8400, 
+    srec_data = 0x6e8400, 
+    verilog_data = 0x6e8400, 
+    ihex_data = 0x6e8400, 
+    tekhex_data = 0x6e8400, 
+    elf_obj_data = 0x6e8400, 
+    mmo_data = 0x6e8400, 
+    sun_core_data = 0x6e8400, 
+    sco5_core_data = 0x6e8400, 
+    trad_core_data = 0x6e8400, 
+    som_data = 0x6e8400, 
+    hpux_core_data = 0x6e8400, 
+    hppabsd_core_data = 0x6e8400, 
+    sgi_core_data = 0x6e8400, 
+    lynx_core_data = 0x6e8400, 
+    osf_core_data = 0x6e8400, 
+    cisco_core_data = 0x6e8400, 
+    versados_data = 0x6e8400, 
+    netbsd_core_data = 0x6e8400, 
+    mach_o_data = 0x6e8400, 
+    mach_o_fat_data = 0x6e8400, 
+    plugin_data = 0x6e8400, 
+    pef_data = 0x6e8400, 
+    pef_xlib_data = 0x6e8400, 
+    sym_data = 0x6e8400, 
+    any = 0x6e8400
+  }, 
+  usrdata = 0x0, 
+  memory = 0x6e83d0, 
+  build_id = 0x0
+}
+34: *abfd = {
+  filename = 0x6ea3f0 "ld-plugin-test3", 
+  xvec = 0x687720 <x86_64_elf64_vec>, 
+  iostream = 0x6ea410, 
+  iovec = 0x66de80 <cache_iovec>, 
+  lru_prev = 0x718e20, 
+  lru_next = 0x90cca0, 
+  where = 0, 
+  mtime = 0, 
+  id = 0, 
+  format = bfd_object, 
+  direction = write_direction, 
+  flags = 386, 
+  cacheable = 1, 
+  target_defaulted = 0, 
+  opened_once = 1, 
+  mtime_set = 0, 
+  no_export = 0, 
+  output_has_begun = 0, 
+  has_armap = 0, 
+  is_thin_archive = 0, 
+  selective_search = 0, 
+  is_linker_output = 1, 
+  is_linker_input = 0, 
+  plugin_format = bfd_plugin_unknown, 
+  lto_output = 0, 
+  plugin_dummy_bfd = 0x0, 
+  origin = 0, 
+  proxy_origin = 0, 
+  section_htab = {
+    table = 0x924320, 
+    newfunc = 0x45c2a8 <bfd_section_hash_newfunc>, 
+    memory = 0x6e93e0, 
+    size = 61, 
+    count = 37, 
+    entsize = 304, 
+    frozen = 0
+  }, 
+  sections = 0x6e9490, 
+  section_last = 0x925100, 
+  section_count = 31, 
+  archive_pass = 0, 
+  start_address = 4198496, 
+  outsymbols = 0x0, 
+  symcount = 0, 
+  dynsymcount = 0, 
+  arch_info = 0x69b8e0 <bfd_x86_64_arch>, 
+  arelt_data = 0x0, 
+  my_archive = 0x0, 
+  archive_next = 0x0, 
+  archive_head = 0x0, 
+  nested_archives = 0x0, 
+  link = {
+    next = 0x6ea640, 
+    hash = 0x6ea640
+  }, 
+  tdata = {
+    aout_data = 0x6e8400, 
+    aout_ar_data = 0x6e8400, 
+    coff_obj_data = 0x6e8400, 
+    pe_obj_data = 0x6e8400, 
+    xcoff_obj_data = 0x6e8400, 
+    ecoff_obj_data = 0x6e8400, 
+    srec_data = 0x6e8400, 
+    verilog_data = 0x6e8400, 
+    ihex_data = 0x6e8400, 
+    tekhex_data = 0x6e8400, 
+    elf_obj_data = 0x6e8400, 
+    mmo_data = 0x6e8400, 
+    sun_core_data = 0x6e8400, 
+    sco5_core_data = 0x6e8400, 
+    trad_core_data = 0x6e8400, 
+    som_data = 0x6e8400, 
+    hpux_core_data = 0x6e8400, 
+    hppabsd_core_data = 0x6e8400, 
+    sgi_core_data = 0x6e8400, 
+    lynx_core_data = 0x6e8400, 
+    osf_core_data = 0x6e8400, 
+    cisco_core_data = 0x6e8400, 
+    versados_data = 0x6e8400, 
+    netbsd_core_data = 0x6e8400, 
+    mach_o_data = 0x6e8400, 
+    mach_o_fat_data = 0x6e8400, 
+    plugin_data = 0x6e8400, 
+    pef_data = 0x6e8400, 
+    pef_xlib_data = 0x6e8400, 
+    sym_data = 0x6e8400, 
+    any = 0x6e8400
+  }, 
+  usrdata = 0x0, 
+  memory = 0x6e83d0, 
+  build_id = 0x0
+}
+Continuing.
+
+Breakpoint 7, elf_link_input_bfd (flinfo=0x7fffffffd180, input_bfd=0x6f9d80) at ../../bfd/elflink.c:10302
+10302	  bfd_boolean have_file_sym = FALSE;
+Continuing.
+
+Breakpoint 7, elf_link_input_bfd (flinfo=0x7fffffffd180, input_bfd=0x7007c0) at ../../bfd/elflink.c:10302
+10302	  bfd_boolean have_file_sym = FALSE;
+Continuing.
+
+Breakpoint 7, elf_link_input_bfd (flinfo=0x7fffffffd180, input_bfd=0x90cdf0) at ../../bfd/elflink.c:10302
+10302	  bfd_boolean have_file_sym = FALSE;
+Continuing.
+
+Breakpoint 7, elf_link_input_bfd (flinfo=0x7fffffffd180, input_bfd=0x76c1c0) at ../../bfd/elflink.c:10302
+10302	  bfd_boolean have_file_sym = FALSE;
+Continuing.
+
+Breakpoint 7, elf_link_input_bfd (flinfo=0x7fffffffd180, input_bfd=0x702ea0) at ../../bfd/elflink.c:10302
+10302	  bfd_boolean have_file_sym = FALSE;
+Continuing.
+
+Breakpoint 7, elf_link_input_bfd (flinfo=0x7fffffffd180, input_bfd=0x9063f0) at ../../bfd/elflink.c:10302
+10302	  bfd_boolean have_file_sym = FALSE;
+Continuing.
+
+Breakpoint 7, elf_link_input_bfd (flinfo=0x7fffffffd180, input_bfd=0x90cca0) at ../../bfd/elflink.c:10302
+10302	  bfd_boolean have_file_sym = FALSE;
+Continuing.
+
+Breakpoint 8, bfd_hash_traverse (table=0x6ea640, func=0x4aa83e <elf_link_output_extsym>, info=0x7fffffffd140) at ../../bfd/hash.c:651
+651	  table->frozen = 1;
+Continuing.
+
+Breakpoint 8, bfd_hash_traverse (table=0x6ea640, func=0x4aa83e <elf_link_output_extsym>, info=0x7fffffffd140) at ../../bfd/hash.c:651
+651	  table->frozen = 1;
+Continuing.
+
+Breakpoint 5, lang_finish () at ../../ld/ldlang.c:1273
+1273	  output_section_statement_table_free ();
+Continuing.
+[Inferior 1 (process 4251) exited normally]
+The program is not being run.
+The program is not being run.
+The program is not being run.
+The program is not being run.
+The program is not being run.
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x000000000041d3f2 in main at ../../ld/ldmain.c:194
+	breakpoint already hit 1 time
+2       breakpoint     keep y   0x00000000004194fb in lang_process at ../../ld/ldlang.c:7160
+	breakpoint already hit 1 time
+3       breakpoint     keep y   0x000000000042090c in ldwrite at ../../ld/ldwrite.c:574
+	breakpoint already hit 1 time
+4       breakpoint     keep y   0x00000000004af0f7 in bfd_elf_final_link at ../../bfd/elflink.c:11663
+	breakpoint already hit 1 time
+5       breakpoint     keep y   0x000000000040efda in lang_finish at ../../ld/ldlang.c:1273
+	breakpoint already hit 1 time
+6       breakpoint     keep y   0x00000000004af8ee in bfd_elf_final_link at ../../bfd/elflink.c:11855
+	breakpoint already hit 4 times
+7       breakpoint     keep y   0x00000000004abeaa in elf_link_input_bfd at ../../bfd/elflink.c:10302
+	breakpoint already hit 7 times
+8       breakpoint     keep y   0x0000000000451c19 in bfd_hash_traverse at ../../bfd/hash.c:651
+	breakpoint already hit 3 times
+Starting program: /home/majiahao/bbbbb/step3/binutils-install/bin/ld -plugin /home/majiahao/bbbbb/step1/gcc-install/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/liblto_plugin.so -plugin /home/majiahao/bbbbb/step3/ld-plugin3.so -plugin=/home/majiahao/bbbbb/step3/ld-plugin.so  -plugin-opt=/home/majiahao/bbbbb/step1/gcc-install/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccFvum21.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 /usr/lib/x86_64-linux-gnu/crt1.o /usr/lib/x86_64-linux-gnu/crti.o /home/majiahao/bbbbb/step1/gcc-install/lib/gcc/x86_64-pc-linux-gnu/8.2.0/crtbegin.o -L/home/majiahao/bbbbb/step1/gcc-install/lib/gcc/x86_64-pc-linux-gnu/8.2.0 -L/home/majiahao/bbbbb/step1/gcc-install/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/home/majiahao/bbbbb/step1/gcc-install/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../.. -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /home/majiahao/bbbbb/step1/gcc-install/lib/gcc/x86_64-pc-linux-gnu/8.2.0/crtend.o /usr/lib/x86_64-linux-gnu/crtn.o ld-plugin-test.o -g -o ld-plugin-test3
+
+Breakpoint 1, main (argc=42, argv=0x7fffffffd5a8) at ../../ld/ldmain.c:194
+194	  long start_time = get_run_time ();
+Continuing.
+
+Breakpoint 2, lang_process () at ../../ld/ldlang.c:7160
+7160	  if (link_info.dynamic_list)
+Please answer y or n.
+Starting program: /home/majiahao/bbbbb/step3/binutils-install/bin/ld -plugin /home/majiahao/bbbbb/step1/gcc-install/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/liblto_plugin.so -plugin /home/majiahao/bbbbb/step3/ld-plugin3.so -plugin=/home/majiahao/bbbbb/step3/ld-plugin.so  -plugin-opt=/home/majiahao/bbbbb/step1/gcc-install/libexec/gcc/x86_64-pc-linux-gnu/8.2.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccFvum21.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 /usr/lib/x86_64-linux-gnu/crt1.o /usr/lib/x86_64-linux-gnu/crti.o /home/majiahao/bbbbb/step1/gcc-install/lib/gcc/x86_64-pc-linux-gnu/8.2.0/crtbegin.o -L/home/majiahao/bbbbb/step1/gcc-install/lib/gcc/x86_64-pc-linux-gnu/8.2.0 -L/home/majiahao/bbbbb/step1/gcc-install/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/home/majiahao/bbbbb/step1/gcc-install/lib/gcc/x86_64-pc-linux-gnu/8.2.0/../../.. -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /home/majiahao/bbbbb/step1/gcc-install/lib/gcc/x86_64-pc-linux-gnu/8.2.0/crtend.o /usr/lib/x86_64-linux-gnu/crtn.o ld-plugin-test.o -g -o ld-plugin-test3
+
+Breakpoint 1, main (argc=42, argv=0x7fffffffd5a8) at ../../ld/ldmain.c:194
+194	  long start_time = get_run_time ();
+Continuing.
+
+Breakpoint 8, bfd_hash_traverse (table=0x6c8c20 <definedness_table>, func=0x423a2e <set_sym_sections>, info=0x0) at ../../bfd/hash.c:651
+651	  table->frozen = 1;
+Continuing.
+
+Breakpoint 3, ldwrite () at ../../ld/ldwrite.c:574
+574	  bfd_set_error (bfd_error_no_error);
+Continuing.
+
+Breakpoint 4, bfd_elf_final_link (abfd=0x6e82b0, info=0x6cdd80 <link_info>) at ../../bfd/elflink.c:11663
+11663	  const struct elf_backend_data *bed = get_elf_backend_data (abfd);
+33: *abfd = {
+  filename = 0x6ea3f0 "ld-plugin-test3", 
+  xvec = 0x687720 <x86_64_elf64_vec>, 
+  iostream = 0x6ea410, 
+  iovec = 0x66de80 <cache_iovec>, 
+  lru_prev = 0x718e20, 
+  lru_next = 0x90cca0, 
+  where = 0, 
+  mtime = 0, 
+  id = 0, 
+  format = bfd_object, 
+  direction = write_direction, 
+  flags = 386, 
+  cacheable = 1, 
+  target_defaulted = 0, 
+  opened_once = 1, 
+  mtime_set = 0, 
+  no_export = 0, 
+  output_has_begun = 0, 
+  has_armap = 0, 
+  is_thin_archive = 0, 
+  selective_search = 0, 
+  is_linker_output = 1, 
+  is_linker_input = 0, 
+  plugin_format = bfd_plugin_unknown, 
+  lto_output = 0, 
+  plugin_dummy_bfd = 0x0, 
+  origin = 0, 
+  proxy_origin = 0, 
+  section_htab = {
+    table = 0x924320, 
+    newfunc = 0x45c2a8 <bfd_section_hash_newfunc>, 
+    memory = 0x6e93e0, 
+    size = 61, 
+    count = 37, 
+    entsize = 304, 
+    frozen = 0
+  }, 
+  sections = 0x6e9490, 
+  section_last = 0x925100, 
+  section_count = 31, 
+  archive_pass = 0, 
+  start_address = 4198496, 
+  outsymbols = 0x0, 
+  symcount = 0, 
+  dynsymcount = 0, 
+  arch_info = 0x69b8e0 <bfd_x86_64_arch>, 
+  arelt_data = 0x0, 
+  my_archive = 0x0, 
+  archive_next = 0x0, 
+  archive_head = 0x0, 
+  nested_archives = 0x0, 
+  link = {
+    next = 0x6ea640, 
+    hash = 0x6ea640
+  }, 
+  tdata = {
+    aout_data = 0x6e8400, 
+    aout_ar_data = 0x6e8400, 
+    coff_obj_data = 0x6e8400, 
+    pe_obj_data = 0x6e8400, 
+    xcoff_obj_data = 0x6e8400, 
+    ecoff_obj_data = 0x6e8400, 
+    srec_data = 0x6e8400, 
+    verilog_data = 0x6e8400, 
+    ihex_data = 0x6e8400, 
+    tekhex_data = 0x6e8400, 
+    elf_obj_data = 0x6e8400, 
+    mmo_data = 0x6e8400, 
+    sun_core_data = 0x6e8400, 
+    sco5_core_data = 0x6e8400, 
+    trad_core_data = 0x6e8400, 
+    som_data = 0x6e8400, 
+    hpux_core_data = 0x6e8400, 
+    hppabsd_core_data = 0x6e8400, 
+    sgi_core_data = 0x6e8400, 
+    lynx_core_data = 0x6e8400, 
+    osf_core_data = 0x6e8400, 
+    cisco_core_data = 0x6e8400, 
+    versados_data = 0x6e8400, 
+    netbsd_core_data = 0x6e8400, 
+    mach_o_data = 0x6e8400, 
+    mach_o_fat_data = 0x6e8400, 
+    plugin_data = 0x6e8400, 
+    pef_data = 0x6e8400, 
+    pef_xlib_data = 0x6e8400, 
+    sym_data = 0x6e8400, 
+    any = 0x6e8400
+  }, 
+  usrdata = 0x0, 
+  memory = 0x6e83d0, 
+  build_id = 0x0
+}
+34: *abfd = {
+  filename = 0x6ea3f0 "ld-plugin-test3", 
+  xvec = 0x687720 <x86_64_elf64_vec>, 
+  iostream = 0x6ea410, 
+  iovec = 0x66de80 <cache_iovec>, 
+  lru_prev = 0x718e20, 
+  lru_next = 0x90cca0, 
+  where = 0, 
+  mtime = 0, 
+  id = 0, 
+  format = bfd_object, 
+  direction = write_direction, 
+  flags = 386, 
+  cacheable = 1, 
+  target_defaulted = 0, 
+  opened_once = 1, 
+  mtime_set = 0, 
+  no_export = 0, 
+  output_has_begun = 0, 
+  has_armap = 0, 
+  is_thin_archive = 0, 
+  selective_search = 0, 
+  is_linker_output = 1, 
+  is_linker_input = 0, 
+  plugin_format = bfd_plugin_unknown, 
+  lto_output = 0, 
+  plugin_dummy_bfd = 0x0, 
+  origin = 0, 
+  proxy_origin = 0, 
+  section_htab = {
+    table = 0x924320, 
+    newfunc = 0x45c2a8 <bfd_section_hash_newfunc>, 
+    memory = 0x6e93e0, 
+    size = 61, 
+    count = 37, 
+    entsize = 304, 
+    frozen = 0
+  }, 
+  sections = 0x6e9490, 
+  section_last = 0x925100, 
+  section_count = 31, 
+  archive_pass = 0, 
+  start_address = 4198496, 
+  outsymbols = 0x0, 
+  symcount = 0, 
+  dynsymcount = 0, 
+  arch_info = 0x69b8e0 <bfd_x86_64_arch>, 
+  arelt_data = 0x0, 
+  my_archive = 0x0, 
+  archive_next = 0x0, 
+  archive_head = 0x0, 
+  nested_archives = 0x0, 
+  link = {
+    next = 0x6ea640, 
+    hash = 0x6ea640
+  }, 
+  tdata = {
+    aout_data = 0x6e8400, 
+    aout_ar_data = 0x6e8400, 
+    coff_obj_data = 0x6e8400, 
+    pe_obj_data = 0x6e8400, 
+    xcoff_obj_data = 0x6e8400, 
+    ecoff_obj_data = 0x6e8400, 
+    srec_data = 0x6e8400, 
+    verilog_data = 0x6e8400, 
+    ihex_data = 0x6e8400, 
+    tekhex_data = 0x6e8400, 
+    elf_obj_data = 0x6e8400, 
+    mmo_data = 0x6e8400, 
+    sun_core_data = 0x6e8400, 
+    sco5_core_data = 0x6e8400, 
+    trad_core_data = 0x6e8400, 
+    som_data = 0x6e8400, 
+    hpux_core_data = 0x6e8400, 
+    hppabsd_core_data = 0x6e8400, 
+    sgi_core_data = 0x6e8400, 
+    lynx_core_data = 0x6e8400, 
+    osf_core_data = 0x6e8400, 
+    cisco_core_data = 0x6e8400, 
+    versados_data = 0x6e8400, 
+    netbsd_core_data = 0x6e8400, 
+    mach_o_data = 0x6e8400, 
+    mach_o_fat_data = 0x6e8400, 
+    plugin_data = 0x6e8400, 
+    pef_data = 0x6e8400, 
+    pef_xlib_data = 0x6e8400, 
+    sym_data = 0x6e8400, 
+    any = 0x6e8400
+  }, 
+  usrdata = 0x0, 
+  memory = 0x6e83d0, 
+  build_id = 0x0
+}
+Continuing.
+
+Breakpoint 6, bfd_elf_final_link (abfd=0x6e82b0, info=0x6cdd80 <link_info>) at ../../bfd/elflink.c:11855
+11855				max_external_reloc_size = ext_size;
+33: *abfd = {
+  filename = 0x6ea3f0 "ld-plugin-test3", 
+  xvec = 0x687720 <x86_64_elf64_vec>, 
+  iostream = 0x6ea410, 
+  iovec = 0x66de80 <cache_iovec>, 
+  lru_prev = 0x718e20, 
+  lru_next = 0x90cca0, 
+  where = 0, 
+  mtime = 0, 
+  id = 0, 
+  format = bfd_object, 
+  direction = write_direction, 
+  flags = 386, 
+  cacheable = 1, 
+  target_defaulted = 0, 
+  opened_once = 1, 
+  mtime_set = 0, 
+  no_export = 0, 
+  output_has_begun = 0, 
+  has_armap = 0, 
+  is_thin_archive = 0, 
+  selective_search = 0, 
+  is_linker_output = 1, 
+  is_linker_input = 0, 
+  plugin_format = bfd_plugin_unknown, 
+  lto_output = 0, 
+  plugin_dummy_bfd = 0x0, 
+  origin = 0, 
+  proxy_origin = 0, 
+  section_htab = {
+    table = 0x924320, 
+    newfunc = 0x45c2a8 <bfd_section_hash_newfunc>, 
+    memory = 0x6e93e0, 
+    size = 61, 
+    count = 37, 
+    entsize = 304, 
+    frozen = 0
+  }, 
+  sections = 0x6e9490, 
+  section_last = 0x925100, 
+  section_count = 31, 
+  archive_pass = 0, 
+  start_address = 4198496, 
+  outsymbols = 0x0, 
+  symcount = 0, 
+  dynsymcount = 0, 
+  arch_info = 0x69b8e0 <bfd_x86_64_arch>, 
+  arelt_data = 0x0, 
+  my_archive = 0x0, 
+  archive_next = 0x0, 
+  archive_head = 0x0, 
+  nested_archives = 0x0, 
+  link = {
+    next = 0x6ea640, 
+    hash = 0x6ea640
+  }, 
+  tdata = {
+    aout_data = 0x6e8400, 
+    aout_ar_data = 0x6e8400, 
+    coff_obj_data = 0x6e8400, 
+    pe_obj_data = 0x6e8400, 
+    xcoff_obj_data = 0x6e8400, 
+    ecoff_obj_data = 0x6e8400, 
+    srec_data = 0x6e8400, 
+    verilog_data = 0x6e8400, 
+    ihex_data = 0x6e8400, 
+    tekhex_data = 0x6e8400, 
+    elf_obj_data = 0x6e8400, 
+    mmo_data = 0x6e8400, 
+    sun_core_data = 0x6e8400, 
+    sco5_core_data = 0x6e8400, 
+    trad_core_data = 0x6e8400, 
+    som_data = 0x6e8400, 
+    hpux_core_data = 0x6e8400, 
+    hppabsd_core_data = 0x6e8400, 
+    sgi_core_data = 0x6e8400, 
+    lynx_core_data = 0x6e8400, 
+    osf_core_data = 0x6e8400, 
+    cisco_core_data = 0x6e8400, 
+    versados_data = 0x6e8400, 
+    netbsd_core_data = 0x6e8400, 
+    mach_o_data = 0x6e8400, 
+    mach_o_fat_data = 0x6e8400, 
+    plugin_data = 0x6e8400, 
+    pef_data = 0x6e8400, 
+    pef_xlib_data = 0x6e8400, 
+    sym_data = 0x6e8400, 
+    any = 0x6e8400
+  }, 
+  usrdata = 0x0, 
+  memory = 0x6e83d0, 
+  build_id = 0x0
+}
+34: *abfd = {
+  filename = 0x6ea3f0 "ld-plugin-test3", 
+  xvec = 0x687720 <x86_64_elf64_vec>, 
+  iostream = 0x6ea410, 
+  iovec = 0x66de80 <cache_iovec>, 
+  lru_prev = 0x718e20, 
+  lru_next = 0x90cca0, 
+  where = 0, 
+  mtime = 0, 
+  id = 0, 
+  format = bfd_object, 
+  direction = write_direction, 
+  flags = 386, 
+  cacheable = 1, 
+  target_defaulted = 0, 
+  opened_once = 1, 
+  mtime_set = 0, 
+  no_export = 0, 
+  output_has_begun = 0, 
+  has_armap = 0, 
+  is_thin_archive = 0, 
+Quit

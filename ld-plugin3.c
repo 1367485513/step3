@@ -124,7 +124,7 @@ static enum ld_plugin_status cleanup_ret = LDPS_OK;
 static bfd_boolean register_claimfile_hook = TRUE;
 static bfd_boolean register_allsymbolsread_hook = TRUE;
 static bfd_boolean register_cleanup_hook = TRUE;
-static bfd_boolean dumpresolutions = FALSE;
+static bfd_boolean dumpresolutions = TRUE;
 static bfd_boolean allsymbolsread_silent = FALSE;
 
 /* The master list of all claimable/claimed files.  */
