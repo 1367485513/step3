@@ -34,6 +34,22 @@
 #endif
 
 //modify code
+static const char * modify_output_sym_type(int a)
+	 {
+		 switch (a)
+		 {
+			 case 0:    return "NOTYPE";         
+			 case 1:    return "OBJECT";
+			 case 2:      return "FUNC";
+			 case 3:   return "SECTION";
+			 case 4:      return "FILE";
+			 case 5:    return "COMMON";
+			 case 6:       return "TLS";
+			 case 8:      return "RELC";
+			 case 9:     return "SRELC";
+			 default:   return "see_readelf_code";
+		 }
+	 }
 
 
 
@@ -9449,7 +9465,8 @@ elf_link_swap_symbols_out (struct elf_final_link_info *flinfo)
 	  = (unsigned long) _bfd_elf_strtab_offset (flinfo->symstrtab,
 						    elfsym->sym.st_name);
       printf("second:num=%4ld,name=%8.8ld,value=%8.8lx,",i,elfsym->sym.st_name,elfsym->sym.st_value);
-      printf("info=%4x,type=%8x.\n",elfsym->sym.st_info,elfsym->sym.st_info & 0xf);
+      printf("info=%4x,type=%8x,",elfsym->sym.st_info,elfsym->sym.st_info & 0xf);
+      printf("type=%-7s\n",modify_output_sym_type(elfsym->sym.st_info & 0xf));
       bed->s->swap_symbol_out (flinfo->output_bfd, &elfsym->sym,
 			       ((bfd_byte *) symbuf
 				+ (elfsym->dest_index
