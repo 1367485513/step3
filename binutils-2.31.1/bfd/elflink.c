@@ -33,6 +33,10 @@
 #include "plugin.h"
 #endif
 
+//modify code
+
+
+
 /* This struct is used to pass information to routines called via
    elf_link_hash_traverse which must return failure.  */
 
@@ -9444,7 +9448,8 @@ elf_link_swap_symbols_out (struct elf_final_link_info *flinfo)
 	elfsym->sym.st_name
 	  = (unsigned long) _bfd_elf_strtab_offset (flinfo->symstrtab,
 						    elfsym->sym.st_name);
-      printf("second:num=%4ld,name=%8.8ld,value=%8.8lx\n",i,elfsym->sym.st_name,elfsym->sym.st_value);
+      printf("second:num=%4ld,name=%8.8ld,value=%8.8lx,",i,elfsym->sym.st_name,elfsym->sym.st_value);
+      printf("info=%4x,type=%8x.\n",elfsym->sym.st_info,elfsym->sym.st_info & 0xf);
       bed->s->swap_symbol_out (flinfo->output_bfd, &elfsym->sym,
 			       ((bfd_byte *) symbuf
 				+ (elfsym->dest_index
