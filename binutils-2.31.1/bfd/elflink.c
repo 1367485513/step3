@@ -9466,8 +9466,8 @@ elf_link_swap_symbols_out (struct elf_final_link_info *flinfo)
 						    elfsym->sym.st_name);
       printf("second:num=%2ld,name=%8.8ld,value=%16.16lx,",i,elfsym->sym.st_name,elfsym->sym.st_value);
       printf("info=%2x,type=%2x,",elfsym->sym.st_info,elfsym->sym.st_info & 0xf);
-      printf("type=%-7s\n",modify_output_sym_type(elfsym->sym.st_info & 0xf));
-      printf("-------------symbol_name=%s,name=%d\n",(*hash_table->root.table.table)->string,*symbuf);
+      printf("type=%-7s, ",modify_output_sym_type(elfsym->sym.st_info & 0xf));
+      printf("name=%s\n",(*hash_table->root.table.table)->string);
       bed->s->swap_symbol_out (flinfo->output_bfd, &elfsym->sym,
 			       ((bfd_byte *) symbuf
 				+ (elfsym->dest_index
