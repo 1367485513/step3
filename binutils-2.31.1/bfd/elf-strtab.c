@@ -281,6 +281,7 @@ _bfd_elf_strtab_offset (struct elf_strtab_hash *tab, size_t idx)
   BFD_ASSERT (tab->sec_size);
   entry = tab->array[idx];
   BFD_ASSERT (entry->refcount > 0);
+  printf("third:num=%d,name=%s\n",idx,entry->root.string);
   entry->refcount--;
   return tab->array[idx]->u.index;
 }
